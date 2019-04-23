@@ -16,3 +16,6 @@ https://stackoverflow.com/questions/19377969/combine-two-columns-of-text-in-data
 
 Selecting rows in DataFrame:
 https://thispointer.com/select-rows-columns-by-name-or-index-in-dataframe-using-loc-iloc-python-pandas/
+
+Udacity:
+www.udacity.com
