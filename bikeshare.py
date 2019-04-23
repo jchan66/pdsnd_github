@@ -46,7 +46,7 @@ def get_filters():
         else:
             print("I didn't get that... Please try Again")
 
-    print('-'*40)
+    print('-'*30)
     return city, month, day
 
 def load_data(city, month, day):
@@ -105,7 +105,7 @@ def time_stats(df):
     print("The most popular time of day to travel is: {}".format(popular_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -124,7 +124,7 @@ def station_stats(df):
     print("The most frequent combination of Start Station and End Stations: {}".format(df['combo'].mode()[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 def timer(seconds):
     minutes = seconds // 60
     seconds = round(seconds % 60, 2)
@@ -161,7 +161,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 
 def user_stats(df):
@@ -193,7 +193,7 @@ def user_stats(df):
         print("This city does not provide birth year statistics")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 def single_user(df):
     #single_user Information
