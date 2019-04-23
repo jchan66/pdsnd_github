@@ -6,7 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-def get_filters():
+def user_filters():
     """
     This function asks user to specify a city, month, and day for analysis.
 
@@ -46,7 +46,7 @@ def get_filters():
         else:
             print("I didn't get that... Please try Again")
 
-    print('-'*40)
+    print('-'*30)
     return city, month, day
 
 def load_data(city, month, day):
@@ -105,7 +105,7 @@ def time_stats(df):
     print("The most popular time of day to travel is: {}".format(popular_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -124,7 +124,8 @@ def station_stats(df):
     print("The most frequent combination of Start Station and End Stations: {}".format(df['combo'].mode()[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
+
 def timer(seconds):
     minutes = seconds // 60
     seconds = round(seconds % 60, 2)
@@ -161,7 +162,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 
 def user_stats(df):
@@ -193,7 +194,7 @@ def user_stats(df):
         print("This city does not provide birth year statistics")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*30)
 
 def single_user(df):
     #single_user Information
@@ -201,7 +202,7 @@ def single_user(df):
     df = df.fillna('Unkown')
     index = 0
     while True:
-        enter = input("Hit enter to see more individual user data, to quit type anything and hit enter.")
+        enter = input("Hit enter key to see more individual user data, to quit type anything and hit enter.")
         if enter != '':
             break
         else:
@@ -210,7 +211,7 @@ def single_user(df):
 
 def main():
     while True:
-        city, month, day = get_filters()
+        city, month, day = user_filters()
         df = load_data(city, month, day)
 
         time_stats(df)
@@ -219,8 +220,8 @@ def main():
         user_stats(df)
         single_user(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? Enter y or n.\n')
+        if restart.lower() != 'y':
             break
 
 
