@@ -202,7 +202,7 @@ def single_user(df):
     df = df.fillna('Unkown')
     index = 0
     while True:
-        enter = input("Hit enter to see more individual user data, to quit type anything and hit enter.")
+        enter = input("Hit enter key to see more individual user data, to quit type anything and hit enter.")
         if enter != '':
             break
         else:
@@ -220,8 +220,8 @@ def main():
         user_stats(df)
         single_user(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? Enter y or n.\n')
+        if restart.lower() != 'y':
             break
 
 
