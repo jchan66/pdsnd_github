@@ -1,15 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+This project was created on 04/23/2019
 
 ### Project Title
-Replace the Project Title
+Bikeshare Py
 
 ### Description
-Describe what your project is about and what it does
+Python Script used to explore bike share data systems in Chicago, New York City, and Washington.
 
 ### Files used
-Include the files used
+bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Concatenate two columns in Pandas:
+https://stackoverflow.com/questions/19377969/combine-two-columns-of-text-in-dataframe-in-pandas-python
 
+Selecting rows in DataFrame:
+https://thispointer.com/select-rows-columns-by-name-or-index-in-dataframe-using-loc-iloc-python-pandas/
